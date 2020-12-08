@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+	section.content {
+		padding: 1rem;
+	}
+
+	table.demo {
+		height: 100px;
+		border: 1px solid #6A6E6E;
+		border-collapse: collapse;
+		padding: 5px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1rem;
+		text-align: center;
+	}
+	table.demo body {
+		height: 350px !important;
+		overflow-y: scroll;
+	}
+	table.demo thead th,
+	tbody td {
+		width: 10%; //or what you want
+		float: left;
+		border: 1px solid #6A6E6E;
+		padding: 5px;
+	}
+
+	table.demo tr {
+		width: 100%;
+	}
+
+	table.demo th {
+		background: #1495AB;
+	}
+
+</style>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Atribuição de Professores | DEMAR </title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1>ATRIBUIÇÃO DE DISCIPLINAS - DEMAR</h1>
+		<div class=faixa1>
+			<p></p>
+		</div>
+		<div class=faixa2>
+			<p></p>
+		</div>
+	</header>
+
+	<section class="content">
+		<table class="demo" id="dvData">
+			<thead>
+				<tr>
+					<th>Código Júpiter</th>
+					<th>Disciplina</th>
+					<th>Professor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>LOM3082</td>
+					<td>Cerâmica Física</td>
+					<td>Fernando Vernilli Junior</td>
+				</tr>
+				<tr>
+					<td>LOM3003</td>
+					<td>Cinética de Transformação em Materiais</td>
+					<td>Hugo Ricardo Z. Sandim</td>
+				</tr>
+				<tr>
+					<td>LOM3203</td>
+					<td>Controle e Automação</td>
+					<td>Carlos Yujiro Shigue</td>
+				</tr>
+				<tr>
+					<td>LOM3204</td>
+					<td>Desenho Técnico e Projeto Assistido por Computação</td>
+					<td>Kátia Cristiane G. Candioto&nbsp;</td>
+				</tr>
+				<tr>
+					<td>LOM3206</td>
+					<td>Eletrônica</td>
+					<td>Emerson Gonçalves de Melo</td>
+				</tr>
+				<tr>
+					<td>LOM3217</td>
+					<td>Física Estatística I</td>
+					<td>Paulo A. Suzuki</td>
+				</tr>
+				<tr>
+					<td>LOM3219</td>
+					<td>Introdução à Nanotecnologia</td>
+					<td>Rebeca Bacani</td>
+				</tr>
+				<tr>
+					<td>LOM3223</td>
+					<td>Materiais e Dispositivos Magneticos e Supercondutores</td>
+					<td>Cristina Bórmio Nunes</td>
+				</tr>
+				<tr>
+					<td>LOM3257</td>
+					<td>Mecânica Clássica</td>
+					<td>Luiz Tadeu Fernades Eleno</td>
+				</tr>
+				<tr>
+					<td>LOM3027</td>
+					<td>Pirometalurgia</td>
+					<td>Carlos Angelo Nunes</td>
+				</tr>
+				<tbody>
+		</table>
+		<div class="container">
+			<div class="center">
+				<a href="/"><button class="myButton">VOLTAR</button></a>
+				<a href="/"><button class="myButton" id="btnExport">BAIXAR</button></a>
+			</div>
+		</div>
+
+	</section>
+	<footer>
+	Developed by Camila Abrantes
+	</footer>
+
+
+	<script>
+		$("#btnExport").click(function (e) {
+			window.open('data:application/vnd.ms-excel,' + $('#dvData').html());
+			e.preventDefault();
+		});
+	</script>
+</body>
+</html>

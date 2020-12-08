@@ -1,0 +1,242 @@
+html,body{
+font-family: Roboto;
+font-style: normal;
+}
+
+header, section, article, footer, p,main,h1,h2,h3,h4 {
+margin:0;
+padding: 0;
+}
+
+html{
+height: 100%;
+}
+
+body{
+background:#fff;
+margin:0 auto;
+margin-bottom:0;
+height: 100vh;
+display: flex;
+flex-direction: column;
+}
+
+body>header h1{
+background: #FAA71B;
+color:#fff;
+left: 0px;
+padding:1rem 0;
+text-align: center;
+margin-top:0;
+width:100%;  
+}
+
+.faixa1 {
+width: 100%;
+height: 18px;
+left: 0px;
+background: #64C6D3;
+}
+
+.faixa2 {
+width: 100%;
+height: 18px;
+left: 0px;
+background: #1495AB;
+}
+
+section{
+display: block;
+width:80%;
+padding: 0 1rem 1rem 1rem;
+margin: auto;
+margin-bottom:0;
+}
+
+section>header {
+padding:0  0 1rem 0;  
+font-size:2rem;
+}
+
+article{
+background: rgba(106, 110, 110, 0.30);
+padding: 1rem;
+}
+
+article>header h2{
+color: #1495AB;
+font-weight: 800;
+margin-bottom:1rem;  
+}
+
+article button {
+background-color:#64C6D3;
+border:0;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-size:1vw;
+font-weight:bold;
+padding:0.3rem;
+margin-top:0.3rem;
+text-decoration:none;
+}
+
+article button:hover {
+background-color:#1495AB;
+}
+
+.profes_disp h3, .turmas_disp h3 {
+color: #64C6D3;
+font-weight: bold;  
+}
+
+* {
+box-sizing: border-box;
+}
+
+.row {
+display: flex;
+}
+
+.column {
+float: left;
+vertical-align: top;
+}
+
+.left {
+width: 70%;
+margin-right: 1rem;
+}
+
+.right {
+width: 25%;
+margin-left: 1rem;
+margin-right: 0;
+}
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.turmas_disp * {
+margin: 0.2rem;
+}
+
+table {
+border-spacing: 1;
+border-collapse: collapse;
+background: white;
+overflow-y: scroll;
+max-width: 800px;
+width: 100%;
+margin: 0 auto;
+position: relative;
+}
+
+thead, tbody{
+display: block;  
+}
+
+tbody{
+overflow-y: scroll;
+}
+
+th, td {
+padding: 5px;
+width:20%;
+}
+
+table * {
+position: relative;
+}
+
+td{
+border: 1px solid rgba(106, 110, 110);
+}
+
+table td, table th {
+padding: 8px;
+}
+
+table thead tr {
+height: 60px;
+background: #1495AB;
+font-size: 16px;
+color:#FFFFFF;
+width:100%;
+}
+
+table tbody tr {
+border-bottom: 1px solid #E3F1D5;
+}
+
+table tbody tr:last-child {
+border: 0;
+}
+
+table td, table th {
+text-align: left;
+}
+
+table td.l, table th.l {
+text-align: right;
+}
+
+table td.c, table th.c {
+text-align: center;
+}
+
+table td.r, table th.r {
+text-align: center;
+}
+
+.container {
+height: 50px;
+position: relative;
+}
+
+.center {
+margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);}
+
+.center button {
+margin-left: 0.5rem;
+margin-right: 0.5rem;
+}
+
+.myButton {
+background-color:#FAA71B;
+border:0;
+display:inline-block;
+cursor:pointer;
+color:#ffffff;
+font-size:1.5vw;
+font-weight:bold;
+padding:0.5rem;
+margin-top:0.2rem;
+text-decoration:none;
+}
+
+.myButton:hover {
+background-color:#64C6D3;
+}
+
+body>footer{
+background: #1495AB;
+color:#fff;
+font-weight: bold;
+font-size: 1u;
+padding:1rem 0;
+text-align: center;
+margin-top:0;
+}
+
+.content{
+flex:1 0 auto;}

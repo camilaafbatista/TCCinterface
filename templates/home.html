@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<style>
+	tbody {
+		height: 350px
+	}
+</style>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Atribuição de Professores | DEMAR </title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+
+	</script>
+</head>
+
+<body>
+	<header>
+		<h1>ATRIBUIÇÃO DE DISCIPLINAS - DEMAR</h1>
+		<div class=faixa1>
+			<p></p>
+		</div>
+		<div class=faixa2>
+			<p></p>
+		</div>
+	</header>
+
+	<section class="content">
+		<header class="busca_disciplina">
+			<form class="example" method="post" action="">
+				<input class="form-control" type="text" placeholder="Pesquise uma Disciplina" aria-label="Search">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+    </header>
+    
+    <div class="row">
+      <article class="column left">
+        <header>
+          <h2>COMO UTILIZAR ESSA FERRAMENTA?</h2>
+        </header>
+		<br>          
+		<h3>1- Pesquise uma disciplina</h3>
+		<br>
+		<p>Na barra de pesquisa acima, pesquise uma disciplina com o seu código.</p>
+		<br>
+		<h3>2- Escolha um professor</h3>
+		<br>
+		<p>Após fazer a pesquisa, o site retornará os professores disponíveis. Escolha uma das opções por meio da caixa de seleções.</p>
+		<br>
+		<h3>3- Salvar!</h3>
+		<br>
+		<p>Clique no botão 'salvar' para salvar a escolha.</p>
+		<br>       
+		<p><b>OBS:</b>  Cheque a disponibilidade dos professores na tabela a direita</p>	   
+      </article>
+ 
+      <div class="column right">
+		  {{ table | safe }}
+      </div>
+    </div>
+ 
+    <div class="container">
+      <div class="center">
+        <a href=#><button class="myButton" onClick="alert('Seleção salva com sucesso!')">SALVAR</button></a>
+        <a href=visualizacao><button class="myButton">VISUALIZAR</button></a>
+      </div>
+    </div>
+  </section>
+ 
+  <footer>
+    Developed by Camila Abrantes
+  </footer>
+
+</body>
+</html>

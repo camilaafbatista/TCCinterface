@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<style>
+	tbody {
+		height: 350px
+	}
+</style>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Atribuição de Professores | DEMAR </title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+	</script>
+</head>
+
+<body>
+	<header>
+		<h1>ATRIBUIÇÃO DE DISCIPLINAS - DEMAR</h1>
+		<div class=faixa1>
+			<p></p>
+		</div>
+		<div class=faixa2>
+			<p></p>
+		</div>
+	</header>
+
+	<section class="content">
+		<header class="busca_disciplina">
+			<form class="example" method="post" action="">
+				<input class="form-control" type="text" placeholder="Pesquise uma Disciplina" aria-label="Search">
+				<button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+    </header>
+    
+    <div class="row">
+      <article class="column left">
+        <header>
+          <h2>LOM3203 - Controle e Automação</h2>
+        </header>          
+        <div class = "profes_disp">
+          <h3>PROFESSORES DISPONÍVEIS</h3>
+          <ul>
+            <li>Carlos Yujiro Shigue</li>
+            <li>Eduardo Ferro</li>
+            <li>Emerson Gonçalves de Melo</li>
+            <li>Fábio Rodolfo Miguel Baptista</li>
+          </ul>
+        
+        </div>
+        <div class = "turmas_disp">
+          <h3>TURMAS</h3>
+ 
+          <label for="turmas">Selecione uma turma:</label>
+            <select name="turmas" id="turmas">
+              <option value="F1">F1</option>
+              <option value="F2">F2</option>
+            </select>
+ 
+          <ul>
+            <li>terça-feira 14:00 - 16:00</li>
+            <li>quinta-feira 14:00 - 16:00</li>
+          </ul>
+          <label for="professores">Selecione um professor:</label>
+              <select name="professores" id="professores">
+                <option value="Carlos Yujiro Shigue">Carlos Yujiro Shigue</option>
+                <option value="Eduardo Ferro">Eduardo Ferro</option>
+                <option value="Emerson Gonçalves de Melo">Emerson Gonçalves de Melo</option>
+                <option value="Fábio Rodolfo Miguel Baptista">Fábio Rodolfo Miguel Baptista</option>
+              </select>
+            <a href="/"><button onClick="alert('Seleção salva com sucesso!')">SALVAR</button></a>
+        </div>
+      </article>
+ 
+      <div class="column right">
+		  {{ table | safe }}
+      </div>
+    </div>
+ 
+    <div class="container">
+      <div class="center">
+        <a href="/"><button class="myButton" onClick="alert('Seleção salva com sucesso!')">SALVAR</button></a>
+        <a href=visualizacao><button class="myButton">VISUALIZAR</button></a>
+    </div>
+    </section>
+ 
+  <footer>
+    Developed by Camila Abrantes
+  </footer>
+</body>
+</html>
